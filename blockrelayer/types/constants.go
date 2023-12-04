@@ -1,0 +1,6 @@
+package types
+
+const (
+	LOCK_INITIATED    = "LOCK_INITIATED"
+	GOERLI_CHAIN_NAME = "ETHEREUM_SEPOLIA_CHAIN"
+)

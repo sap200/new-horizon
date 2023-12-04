@@ -1,0 +1,932 @@
+{
+	"compiler": {
+		"version": "0.7.6+commit.7338295f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_auctionSmartContract",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "LeaveBank",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "bankList",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "admin",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "bankName",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "interestRate",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "tenure",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "totalBalance",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "functional",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256",
+						"name": "loanPercentage",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint32",
+						"name": "defaultingLimit",
+						"type": "uint32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "defaultingTimeLimit",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "loanId",
+						"type": "uint256"
+					}
+				],
+				"name": "calculateDues",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "bankId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "loanId",
+						"type": "uint256"
+					}
+				],
+				"name": "cancelAuctionBeforeTime",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "bankId",
+						"type": "uint256"
+					}
+				],
+				"name": "checkIfActiveLoanExists",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "bankId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "loanId",
+						"type": "uint256"
+					}
+				],
+				"name": "checkIfAuctionHasExpired",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "bankId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "loanId",
+						"type": "uint256"
+					}
+				],
+				"name": "checkIfAuctionable",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "bankId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "loanId",
+						"type": "uint256"
+					}
+				],
+				"name": "claimBalanceFromLoan",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "bankId",
+						"type": "uint256"
+					}
+				],
+				"name": "closeBank",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "bankName",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_interestRate",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_tenure",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_loanPercentage",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint32",
+						"name": "_defaultingLimit",
+						"type": "uint32"
+					},
+					{
+						"internalType": "uint32",
+						"name": "_defaultingTimeLimit",
+						"type": "uint32"
+					}
+				],
+				"name": "createBank",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "creationThreshold",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "daysAfterWhichAuctionShouldEnd",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "bankId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "nftContractAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "price",
+						"type": "uint256"
+					}
+				],
+				"name": "depositNFT",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "bankId",
+						"type": "uint256"
+					}
+				],
+				"name": "depositToBank",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "bankId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "loanId",
+						"type": "uint256"
+					}
+				],
+				"name": "finalizeAuctionBeforeTime",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getAllBanksOfCustomer",
+				"outputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "bankId",
+						"type": "uint256"
+					}
+				],
+				"name": "getAllCustomersOfBank",
+				"outputs": [
+					{
+						"internalType": "address[]",
+						"name": "",
+						"type": "address[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "bankId",
+						"type": "uint256"
+					}
+				],
+				"name": "getAllLendersOfBank",
+				"outputs": [
+					{
+						"internalType": "address[]",
+						"name": "",
+						"type": "address[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "bankId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					}
+				],
+				"name": "getAllNftDepositsOfBank",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "loanId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "pledger",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "tokenId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bool",
+								"name": "canWithdraw",
+								"type": "bool"
+							},
+							{
+								"internalType": "uint256",
+								"name": "loanAmount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "interestRate",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "tenure",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "repaymentAmount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "interest",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "lateChargesIncurred",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "amountRepaid",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "bankToWhichItisPledged",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "nftContractAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "bool",
+								"name": "isActiveLoan",
+								"type": "bool"
+							},
+							{
+								"internalType": "address",
+								"name": "lastKnownCurrentOwner",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "amountReturnedToUser",
+								"type": "uint256"
+							},
+							{
+								"internalType": "enum BlockBorrower.AuctionState",
+								"name": "auctionState",
+								"type": "uint8"
+							},
+							{
+								"internalType": "uint256",
+								"name": "auctionId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "amountEarnedFromAuction",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bool",
+								"name": "canBeAuctioned",
+								"type": "bool"
+							},
+							{
+								"internalType": "string",
+								"name": "nftSymbol",
+								"type": "string"
+							},
+							{
+								"internalType": "bool",
+								"name": "hasClaimed",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct BlockBorrower.NFT[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "bankId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "myAddress",
+						"type": "address"
+					}
+				],
+				"name": "getMyBankBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "loanId",
+						"type": "uint256"
+					}
+				],
+				"name": "getRepaymentSchedules",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "rpsIndex",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "amount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "dueDate",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "amountRepaid",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct BlockBorrower.RepaymentSchedule[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "bankId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "myAddress",
+						"type": "address"
+					}
+				],
+				"name": "getStatusOfLender",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getTotalNumberOfBanks",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "bankId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "loanId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "userAddress",
+						"type": "address"
+					}
+				],
+				"name": "isLoanClosed",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "bankId",
+						"type": "uint256"
+					}
+				],
+				"name": "joinBank",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "joiningThreshold",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "latePaymentCharge",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "lenderAddressToBankMapping",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "loanIdToAddressMapping",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "minimumDepositAmount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "bankId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "loanId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "rpsIndex",
+						"type": "uint256"
+					}
+				],
+				"name": "repayEmi",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "bankId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "rate",
+						"type": "uint256"
+					}
+				],
+				"name": "setInterestRate",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "bankId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "tenure",
+						"type": "uint256"
+					}
+				],
+				"name": "setTenure",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "bankId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "loanId",
+						"type": "uint256"
+					}
+				],
+				"name": "startAuction",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "withdrawBalance",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "bankId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "nftContract",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "loanId",
+						"type": "uint256"
+					}
+				],
+				"name": "withdrawNFT",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/BlockBorrower.sol": "BlockBorrower"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Auction.sol": {
+			"keccak256": "0x02bcac762d8ba2cebcfb8f142d778da6bab38f29d2028c2c2127b73647f995cc",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7a36102cebe05c05e5d8753579fa1e8682492ecf1a484f236198137c8dc56910",
+				"dweb:/ipfs/QmeuwGqs6BBzFMg35ogKwi3jYYJtXtfkpdJ6gSHsM63AiT"
+			]
+		},
+		"contracts/BlockBorrower.sol": {
+			"keccak256": "0x93365566002902a7e4791aac87e002529d55ae0bc5920a619bc44dcbffe2d93e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7f5976284c48d95ab56d4f3e21be7c114ce67e3fa1619c4046299bde6395066e",
+				"dweb:/ipfs/QmSne7Znpu3StkWAVVLy4XfktjmdqcFU2QaPSLaDt8yVc8"
+			]
+		},
+		"https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.4.0/contracts/introspection/IERC165.sol": {
+			"keccak256": "0xf70bc25d981e4ec9673a995ad2995d5d493ea188d3d8f388bba9c227ce09fb82",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://bd970f51e3a77790c2f02b5b1759827c3b897c3d98c407b3631e8af32e3dc93c",
+				"dweb:/ipfs/QmPF85Amgbqjk3SNZKsPCsqCw8JfwYEPMnnhvMJUyX58je"
+			]
+		},
+		"https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.4.0/contracts/token/ERC721/IERC721.sol": {
+			"keccak256": "0x2d99a0deb6648c34fbc66d6ac4a2d64798d7a5321b45624f6736fadc63da1962",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2dcdce5ede1e5e650d174ec0b35be7d47b6a50f30bc895ef0d9e59fb75052e45",
+				"dweb:/ipfs/QmQ2XFsDLTYqfEdw7pYzHiGtFRY11yQm4b6ynYgKqDxeB8"
+			]
+		},
+		"https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.4.0/contracts/token/ERC721/IERC721Metadata.sol": {
+			"keccak256": "0xccb917776f826ac6b68bd5a15a5f711e3967848a52ba11e6104d9a4f593314a7",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://430255ad2229ced6d880e61a67bdc6e48dbbaed8354a7c1fe918cd8b8714a886",
+				"dweb:/ipfs/QmTHY56odzqEpEC6v6tafaWMYY7vmULw25q5XHJLCCAeox"
+			]
+		}
+	},
+	"version": 1
+}

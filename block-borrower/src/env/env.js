@@ -1,0 +1,9 @@
+export const AUCTION_CONTRACT_ADDRESS = "0x0B2fcD8736E5726917efb8ab476AFd63e1ae2068";
+export const MINTER_CONTRACT_ADDRESS =  "0x5134847Dd630F1ed4B5Cc0fc08328a204CEB2D4D";
+export const BLOCKBORROWER_CONTRACT_ADDRESS = "0x94cd50Fc61Bb74DBdFCEc715fF44207faF80Ae54";
+export const EVM_SIDECHAIN_BLOCK_EXPLORER = "https://evm-sidechain.xrpl.org/tx/";
+export const EVM_SIDECHAIN_RPC = "https://rpc-evm-sidechain.xrpl.org/";
+export const MIN_VAL_CREATE_BANK = "455"
+export const MIN_VAL_JOIN_BANK = "205"
+export const MIN_LN_AMT_RND = 100;
+export const MAX_LN_AMT_RND = 400
