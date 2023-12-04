@@ -1,8 +1,10 @@
 # New Horizon Hackathon Judging Repository
 
-![Block Borrower Image](./assets/blockBorrower_logo.png)
+#### This repository is a collection of four distinct projects developed for the New Horizon Hackathon. Each project plays a specific role in our comprehensive blockchain application.
 
-This repository is a collection of four distinct projects developed for the New Horizon Hackathon. Each project plays a specific role in our comprehensive blockchain application.
+<img src="./assets/blockBorrower_logo.png.jpg" alt="Block Borrower Logo" width="400" height="300">
+
+
 
 ## Repositories Overview
 
