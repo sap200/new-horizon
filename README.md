@@ -12,7 +12,7 @@
 ## Repositories Overview
 
 ### block-borrower
-- [Try it out] (https://profound-lebkuchen-3f56dc.netlify.app/)
+- [Try it out](https://profound-lebkuchen-3f56dc.netlify.app/)
 - **Functionality**: Front-end interface for user interactions.
 - **Details**: Further information can be found in the repository's README.
 
