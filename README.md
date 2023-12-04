@@ -5,6 +5,7 @@ This repository is a collection of four distinct projects developed for the New 
 ## Repositories Overview
 
 ### block-borrower
+- [Try it out] (https://profound-lebkuchen-3f56dc.netlify.app/)
 - **Functionality**: Front-end interface for user interactions.
 - **Details**: Further information can be found in the repository's README.
 
@@ -19,6 +20,8 @@ This repository is a collection of four distinct projects developed for the New 
 - **Details**: Additional specifics are available in the repository's README.
 
 ### sx-relayer
+- [Try it out](https://strong-dusk-b787a1.netlify.app/)
+- **Note**: Use Mint Button to mint test DogNFTs for testing purpose.
 - **Functionality**: Primarily serves as a front-end bridge for transferring NFTs.
 - **Details**: More information about its capabilities and usage can be found in the repository's README.
 
