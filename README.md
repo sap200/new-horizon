@@ -12,7 +12,7 @@
 ## Repositories Overview
 
 ### block-borrower
-- [Try it out](https://profound-lebkuchen-3f56dc.netlify.app/)
+- [Try it out](https://funny-salmiakki-254d51.netlify.app/)
 - **Functionality**: Front-end interface for user interactions.
 - **Details**: Further information can be found in the repository's README.
 
@@ -27,7 +27,7 @@
 - **Details**: Additional specifics are available in the repository's README.
 
 ### sx-relayer
-- [Try it out](https://strong-dusk-b787a1.netlify.app/)
+- [Try it out](https://friendly-blini-b6d679.netlify.app/)
 - **Note**: Use Mint Button to mint test DogNFTs for testing purpose.
 - **Functionality**: Primarily serves as a front-end bridge for transferring NFTs.
 - **Details**: More information about its capabilities and usage can be found in the repository's README.
