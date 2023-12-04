@@ -19,7 +19,7 @@ This repository is a collection of four distinct projects developed for the New 
 - **Details**: Additional specifics are available in the repository's README.
 
 ### sx-relayer
-- **Functionality**: Primarily serves as a front-end bridge for transferring NFTs. Additionally, it integrates a previously developed NFT DApp for minting NFTs, which is accessible via the mint button. This integration is for convenience and is not the central theme or main idea of the `sx-relayer`. **Please do not consider it for judging, only use it for testing purpose.**
+- **Functionality**: Primarily serves as a front-end bridge for transferring NFTs.
 - **Details**: More information about its capabilities and usage can be found in the repository's README.
 
 
