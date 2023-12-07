@@ -27,6 +27,7 @@ contract Minter is ERC721 {
         string symbol;
         Status status;
         string tokenURI;
+        address toSepoliaSendersAddress;
     }
 
     mapping(address => mapping(uint256 => NFTDetails)) public tokenIdToNFTDetailsMapping;
@@ -90,6 +91,7 @@ contract Minter is ERC721 {
             // take the possession
             _transfer(msg.sender, address(this), tokenIdToNFTDetailsMapping[nftContractAddress][sTokenId].nftId);
             tokenIdToNFTDetailsMapping[nftContractAddress][sTokenId].receipentAddressInSourceChain = receiverAddress;
+            tokenIdToNFTDetailsMapping[nftContractAddress][sTokenId].toSepoliaSendersAddress = msg.sender;
             tokenIdToNFTDetailsMapping[nftContractAddress][sTokenId].status = Status.BURN_INITIATED;
 
             emit BurnInitiated(block.timestamp, nftContractAddress, sTokenId, tokenIdToNFTDetailsMapping[nftContractAddress][sTokenId].nftId, tokenIdToNFTDetailsMapping[nftContractAddress][sTokenId], "BURN_INITIATED");
@@ -111,7 +113,7 @@ contract Minter is ERC721 {
             require(sTokenId != 0, "source token is 0");
             require(nftContractAddress != address(0), "Invalid nft contract address");
             require(tokenIdToNFTDetailsMapping[nftContractAddress][sTokenId].status == Status.BURN_INITIATED, "Burn not initiated");
-            _transfer(address(this), tokenIdToNFTDetailsMapping[nftContractAddress][sTokenId].destinationAddress, tokenIdToNFTDetailsMapping[nftContractAddress][sTokenId].nftId);
+            _transfer(address(this), tokenIdToNFTDetailsMapping[nftContractAddress][sTokenId].toSepoliaSendersAddress, tokenIdToNFTDetailsMapping[nftContractAddress][sTokenId].nftId);
             tokenIdToNFTDetailsMapping[nftContractAddress][sTokenId].status = Status.REVERT_BURN;
             tokenIdToNFTDetailsMapping[nftContractAddress][sTokenId].receipentAddressInSourceChain = address(0);
 
